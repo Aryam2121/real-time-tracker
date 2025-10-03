@@ -1,0 +1,360 @@
+/* Enhanced styles for delivery tracker */
+
+.delivery-tracker {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.tracker-header {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.tracker-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.eta-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.map-container {
+  position: relative;
+  height: 400px;
+  background: #e9ecef;
+}
+
+.delivery-partner-card {
+  background: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partner-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partner-avatar {
+  width: 48px;
+  height: 48px;
+  background: #ff6b35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.partner-details h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.partner-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.partner-rating span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.partner-details p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.call-button {
+  width: 44px;
+  height: 44px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.call-button:hover {
+  background: #45a049;
+}
+
+.status-timeline {
+  background: white;
+  margin: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-timeline h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e9ecef;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+
+.timeline-item.current {
+  opacity: 1;
+}
+
+.timeline-item.current .timeline-icon {
+  background: #ff6b35;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+  }
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  background: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.timeline-item:not(.active) .timeline-icon {
+  background: #e9ecef;
+  color: #adb5bd;
+}
+
+.timeline-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.timeline-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.order-summary {
+  background: white;
+  margin: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-items {
+  margin-bottom: 12px;
+}
+
+.order-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-total {
+  padding: 12px 0;
+  border-top: 2px solid #f0f0f0;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-time {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .delivery-tracker {
+    max-width: 100%;
+  }
+  
+  .tracker-header {
+    padding: 16px;
+  }
+  
+  .map-container {
+    height: 300px;
+  }
+  
+  .delivery-partner-card,
+  .status-timeline,
+  .order-summary {
+    margin: 12px;
+    padding: 16px;
+  }
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Route animations */
+@keyframes routePulse {
+  0% {
+    opacity: 0.8;
+    stroke-width: 6;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 8;
+  }
+  100% {
+    opacity: 0.8;
+    stroke-width: 6;
+  }
+}
+
+/* Custom styling for leaflet routing */
+.leaflet-routing-container {
+  display: none !important; /* Hide the instruction panel */
+}
+
+.leaflet-routing-line {
+  stroke: #2196F3 !important;
+  stroke-width: 6 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  fill: none !important;
+}
+
+/* Animate the delivery route */
+.leaflet-routing-line.active-delivery {
+  animation: routePulse 2s ease-in-out infinite;
+}
+
+/* Add moving dots effect on the route */
+@keyframes movingDots {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+
+.leaflet-routing-line.delivering {
+  stroke-dasharray: 10, 10;
+  animation: movingDots 1s linear infinite, routePulse 2s ease-in-out infinite;
+}
+
+/* Smooth marker animation */
+.leaflet-marker-icon {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.leaflet-marker-icon.moving {
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Delivery partner marker pulse effect */
+.delivery-marker {
+  animation: markerPulse 2s ease-in-out infinite;
+}
+
+@keyframes markerPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}

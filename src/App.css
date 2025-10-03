@@ -1,0 +1,62 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.app-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.view-btn {
+  padding: 12px 24px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  background: white;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.view-btn:hover {
+  border-color: #ff6b35;
+  color: #ff6b35;
+  transform: translateY(-1px);
+}
+
+.view-btn.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+@media (max-width: 480px) {
+  .app-switcher {
+    padding: 15px;
+    gap: 8px;
+  }
+  
+  .view-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
